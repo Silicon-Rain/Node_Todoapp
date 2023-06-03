@@ -49,22 +49,5 @@ export const userbyid3 = async (req,res) => {
     });
 }
 
-export const updateUser = async (req,res) => {
-    const {id} = req.params;
-    const user = await User.findById(id);
-    res.json ({
-        success:true,
-        message:"Updated"
-    });
-}
 
-export const deleteUser = async (req,res) => {
-    const {id} = req.params;
-    const user = await User.findById(id);
-    // await user.remove();
-    res.json ({
-        success:true,
-        message:"Deleted"
-    });
-}
 

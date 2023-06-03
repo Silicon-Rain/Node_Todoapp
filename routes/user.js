@@ -1,5 +1,5 @@
 import express from "express";
-import { deleteUser, getAllUsers, register, updateUser, userbyid1, userbyid2, userbyid3 } from "../controllers/user.js";
+import { getAllUsers, register, userbyid1, userbyid2, userbyid3 } from "../controllers/user.js";
 
 const router = express.Router();
 
@@ -13,8 +13,6 @@ router.post("/userid", userbyid2);
 
 router
     .route("/userid/:id")
-    .get(userbyid3)
-    .put(updateUser)
-    .delete(deleteUser);
+    .get(userbyid3);
 
 export default router;
